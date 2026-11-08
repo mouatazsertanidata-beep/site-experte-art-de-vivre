@@ -50,6 +50,15 @@ Beaucoup de gens souffrent en silence : stress chronique, conflits de couple, te
 
 ---
 
+## Intégrations API
+
+- **WhatsApp Business API** : bouton "Contacter sur WhatsApp" qui ouvre une conversation pré-remplie avec un message d'accueil
+- **Formulaire de réservation** : envoi des données du formulaire via une API (Formspree, EmailJS ou Web3Forms) pour recevoir les demandes par email sans backend
+- **Google Maps** : embed de la localisation du cabinet (si en présentiel)
+- **Calendly ou Cal.com** : option d'intégration d'un widget de prise de rendez-vous en ligne
+
+---
+
 ## Contraintes techniques
 
 - Un seul fichier HTML autonome
@@ -82,5 +91,7 @@ Images d'inspiration : je t'envoie aussi des images d'inspiration avec la photo.
 
 Direction artistique : ambiance calme, sérénité, luxe accessible. Couleurs : beige, vert olive, blanc crème, touches dorées. Typographie raffinée et lisible. Design épuré, beaucoup d'espace blanc. Ajoute des effets visuels qui différencient ce site des autres : animations élégantes au scroll (fade-in, slide-up), effet parallaxe subtil sur le hero, micro-interactions sur les boutons et les cartes (hover avec ombre et légère élévation), transition douce entre les sections, effet glassmorphism léger sur certains éléments. Mobile-first, 100% responsive.
 
-Technique : un seul fichier HTML autonome, CSS et JS intégrés, Google Fonts uniquement comme ressource externe. Le site doit fonctionner en ouvrant le fichier dans un navigateur. Langue : français.
+Intégrations API : bouton WhatsApp qui ouvre une conversation pré-remplie (api.whatsapp.com/send?phone=NUMERO&text=MESSAGE), formulaire de réservation connecté à un service d'envoi email sans backend (Formspree, EmailJS ou Web3Forms, mets un placeholder pour la clé API), option d'embed Calendly ou Cal.com pour la prise de rendez-vous en ligne, embed Google Maps pour la localisation du cabinet.
+
+Technique : un seul fichier HTML autonome, CSS et JS intégrés, Google Fonts uniquement comme ressource externe. Le site doit fonctionner en ouvrant le fichier dans un navigateur. Mets des placeholders clairs (ex: VOTRE_NUMERO_WHATSAPP, VOTRE_CLE_FORMSPREE, VOTRE_LIEN_CALENDLY) pour que je puisse facilement remplacer par mes vraies valeurs. Langue : français.
 ```
