@@ -74,9 +74,13 @@ Elle aide les gens qui souffrent de stress chronique, conflits de couple, tensio
 
 Services : coaching individuel (confiance en soi, gestion du stress), thérapie de couple (communication, résolution de conflits), accompagnement familial (apaiser les tensions, rétablir le dialogue). Consultations en ligne et en présentiel.
 
-Structure one-page : hero avec accroche émotionnelle et bouton "Réserver une séance", section "Qui suis-je", section services en cartes visuelles, 3 témoignages crédibles, formulaire de réservation minimaliste (nom, téléphone, type de séance), footer avec WhatsApp, email, téléphone et réseaux sociaux.
+Structure one-page : hero avec accroche émotionnelle et bouton "Réserver une séance", section "Qui suis-je" avec la photo de l'experte, section services en cartes visuelles, 3 témoignages crédibles, formulaire de réservation minimaliste (nom, téléphone, type de séance), footer avec WhatsApp, email, téléphone et réseaux sociaux.
 
-Direction artistique : ambiance calme, sérénité, luxe accessible. Couleurs : beige, vert olive, blanc crème, touches dorées. Typographie raffinée et lisible. Design épuré, beaucoup d'espace blanc, animations légères au scroll. Mobile-first, 100% responsive.
+Photo de l'experte : je t'envoie une photo de l'experte avec ce prompt. Utilise cette photo dans le site, notamment dans la section "Qui suis-je" et/ou le hero. Tu peux la styliser (forme arrondie, ombre portée, bordure dorée, léger effet de superposition avec un fond) mais le visage et les expressions doivent rester exactement les mêmes, sans aucune modification du visage ni des traits.
+
+Images d'inspiration : je t'envoie aussi des images d'inspiration avec la photo. Utilise-les comme référence pour le style visuel, la mise en page, les couleurs et l'ambiance générale du site. Inspire-toi de ces images pour créer un design unique et moderne.
+
+Direction artistique : ambiance calme, sérénité, luxe accessible. Couleurs : beige, vert olive, blanc crème, touches dorées. Typographie raffinée et lisible. Design épuré, beaucoup d'espace blanc. Ajoute des effets visuels qui différencient ce site des autres : animations élégantes au scroll (fade-in, slide-up), effet parallaxe subtil sur le hero, micro-interactions sur les boutons et les cartes (hover avec ombre et légère élévation), transition douce entre les sections, effet glassmorphism léger sur certains éléments. Mobile-first, 100% responsive.
 
 Technique : un seul fichier HTML autonome, CSS et JS intégrés, Google Fonts uniquement comme ressource externe. Le site doit fonctionner en ouvrant le fichier dans un navigateur. Langue : français.
 ```
