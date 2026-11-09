@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Art de vivre & bien-être — Coaching, couple, famille</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;background:#F8F4EC;color:#24261C;font-family:'Jost',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#4A5233;text-decoration:none}
+a:hover{color:#7D6236}
+::selection{background:#E3D6BF}
+input,button,textarea{font-family:inherit}
+input::placeholder{color:#A39C8C}
+
+.nav-link{font-size:15px;color:#3A3C30;transition:color .3s}
+.nav-link:hover{color:#7D6236}
+
+.cta-primary{display:inline-flex;align-items:center;gap:14px;padding:7px 7px 7px 28px;min-height:58px;border-radius:999px;background:#2E3322;color:#F8F4EC;font-size:16px;font-weight:500;transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s,background .4s}
+.cta-primary:hover{transform:translateY(-3px);box-shadow:0 20px 40px -16px rgba(46,51,34,0.6);background:#3B4129;color:#F8F4EC}
+
+.cta-primary-sm{display:inline-flex;align-items:center;gap:10px;padding:6px 6px 6px 20px;min-height:48px;border-radius:999px;background:#2E3322;color:#F8F4EC;font-size:14.5px;font-weight:500;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,background .35s}
+.cta-primary-sm:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(46,51,34,0.6);background:#3B4129;color:#F8F4EC}
+
+.cta-secondary{display:inline-flex;align-items:center;gap:10px;padding:0 26px;min-height:58px;border-radius:999px;border:1px solid rgba(46,51,34,0.22);color:#2E3322;font-size:16px;background:rgba(255,253,248,0.4);transition:transform .4s cubic-bezier(.2,.7,.2,1),background .4s,border-color .4s}
+.cta-secondary:hover{transform:translateY(-3px);background:#FFFDF8;border-color:#C9A96E;color:#2E3322}
+
+.cta-wa-light{align-self:flex-start;display:inline-flex;align-items:center;gap:12px;padding:0 26px;min-height:56px;border-radius:999px;background:#FFFDF8;border:1px solid #DCCFB6;color:#2E3322;font-size:16px;font-weight:500;transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s,border-color .4s}
+.cta-wa-light:hover{transform:translateY(-3px);box-shadow:0 18px 36px -18px rgba(46,51,34,0.45);border-color:#C9A96E;color:#2E3322}
+
+.service-card{flex:1;display:flex;flex-direction:column;background:#FFFDF8;border:1px solid #EAE0CC;border-radius:28px;padding:clamp(28px,3vw,40px);transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s,border-color .5s}
+.service-card:hover{transform:translateY(-8px);box-shadow:0 44px 70px -40px rgba(46,51,34,0.45);border-color:#D9C49C}
+
+.testimonial-card{flex:1;margin:0;display:flex;flex-direction:column;gap:28px;padding:clamp(28px,3vw,40px);border-radius:28px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:transform .5s cubic-bezier(.2,.7,.2,1),background .5s,border-color .5s}
+.testimonial-card:hover{transform:translateY(-6px);background:rgba(255,255,255,0.08);border-color:rgba(212,185,133,0.4)}
+
+.book-btn{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:14px;min-height:48px;padding:0;background:none;border:none;cursor:pointer;font-size:15.5px;font-weight:500;color:#2E3322;font-family:inherit;transition:gap .35s}
+.book-btn:hover{gap:20px}
+
+.form-input{height:56px;padding:0 18px;border-radius:14px;border:1px solid #DDD2BD;background:#FFFDF8;font-size:17px;color:#24261C;outline:none;transition:border-color .3s,box-shadow .3s;width:100%}
+.form-input:focus{border-color:#B08D57;box-shadow:0 0 0 4px rgba(176,141,87,0.18)}
+
+.type-btn{text-align:left;display:flex;gap:12px;align-items:flex-start;padding:16px;min-height:76px;border-radius:16px;cursor:pointer;transition:background .3s,border-color .3s,transform .3s;font-family:inherit;font-size:inherit}
+.type-btn:hover{transform:translateY(-2px)}
+
+.submit-btn{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:7px 7px 7px 28px;min-height:62px;border-radius:999px;border:none;background:#2E3322;color:#F8F4EC;font-size:16.5px;font-weight:500;cursor:pointer;font-family:inherit;transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s,background .4s;width:100%}
+.submit-btn:hover{transform:translateY(-3px);box-shadow:0 20px 40px -16px rgba(46,51,34,0.6);background:#3B4129}
+
+.confirm-wa{display:inline-flex;align-items:center;gap:10px;padding:0 24px;min-height:54px;border-radius:999px;background:#2E3322;color:#F8F4EC;font-size:15.5px;font-weight:500;transition:transform .4s,box-shadow .4s}
+.confirm-wa:hover{transform:translateY(-2px);box-shadow:0 16px 32px -16px rgba(46,51,34,0.6);color:#F8F4EC}
+
+.reset-btn{padding:0 22px;min-height:54px;border-radius:999px;border:1px solid #DCCFB6;background:transparent;color:#2E3322;font-size:15.5px;cursor:pointer;font-family:inherit;transition:background .3s}
+.reset-btn:hover{background:#FFFDF8}
+
+.footer-link{font-size:16px;color:#F3EEE3;transition:color .3s}
+.footer-link:hover{color:#D4B985}
+.footer-contact{display:flex;flex-direction:column;gap:2px;color:#F3EEE3;transition:color .3s}
+.footer-contact:hover{color:#D4B985}
+.footer-legal{color:#A9AC92;transition:color .3s}
+.footer-legal:hover{color:#D4B985}
+
+.float-wa{position:fixed;right:clamp(14px,2.5vw,28px);bottom:clamp(14px,2.5vw,28px);z-index:45;display:flex;align-items:center;gap:10px;padding:8px 22px 8px 8px;min-height:56px;border-radius:999px;background:rgba(46,51,34,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#F8F4EC;font-size:15px;font-weight:500;box-shadow:0 18px 40px -16px rgba(36,38,28,0.6);border:1px solid rgba(255,255,255,0.12);transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.float-wa:hover{transform:translateY(-4px);box-shadow:0 26px 50px -18px rgba(36,38,28,0.7);color:#F8F4EC}
+
+.mobile-overlay{position:fixed;inset:0;z-index:60;background:rgba(248,244,236,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);display:flex;flex-direction:column;padding:22px clamp(20px,6vw,56px) 36px}
+.mobile-menu-link{font-family:'Cormorant Garamond',Georgia,serif;font-size:42px;color:#24261C;padding:12px 0;border-bottom:1px solid #E6DCC8;display:block}
+
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+<div id="root" style="min-height:100vh;background:#F8F4EC;color:#24261C;font-family:'Jost',system-ui,sans-serif;overflow-x:clip">
+
+  <!-- HEADER -->
+  <header style="position:fixed;top:0;left:0;right:0;z-index:40;padding:14px clamp(12px,3vw,28px)">
+    <nav style="max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:8px 8px 8px 24px;border-radius:999px;background:rgba(250,247,240,0.72);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border:1px solid rgba(255,255,255,0.75);box-shadow:0 12px 40px -22px rgba(46,51,34,0.3)">
+      <a href="#top" style="display:flex;flex-direction:column;gap:3px;line-height:1;color:#24261C">
+        <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:500;letter-spacing:0.01em">Sanae Jermounoi</span>
+        <span style="font-size:10px;letter-spacing:0.32em;text-transform:uppercase;color:#7D6236">Art de vivre</span>
+      </a>
+      <div id="desktop-nav" style="display:flex;align-items:center;gap:clamp(20px,2.6vw,36px)">
+        <a href="#apropos" class="nav-link">Qui suis-je</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#temoignages" class="nav-link">Témoignages</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <a id="desktop-cta" href="#reservation" class="cta-primary-sm">Réserver une séance<span style="width:36px;height:36px;border-radius:50%;background:#C9A96E;color:#24261C;display:grid;place-items:center;font-size:16px">→</span></a>
+      <button id="menu-open" type="button" aria-label="Ouvrir le menu" style="display:none;width:48px;height:48px;border-radius:50%;border:none;background:#2E3322;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:6px">
+        <span style="width:18px;height:1.5px;background:#F8F4EC;display:block"></span>
+        <span style="width:18px;height:1.5px;background:#F8F4EC;display:block"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="mobile-overlay hidden">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding-left:12px">
+      <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:500">Sanae Jermounoi</span>
+      <button id="menu-close" type="button" aria-label="Fermer le menu" style="position:relative;width:48px;height:48px;border-radius:50%;border:1px solid #D9CDB6;background:transparent;cursor:pointer">
+        <span style="position:absolute;left:14px;top:23px;width:20px;height:1.5px;background:#24261C;transform:rotate(45deg)"></span>
+        <span style="position:absolute;left:14px;top:23px;width:20px;height:1.5px;background:#24261C;transform:rotate(-45deg)"></span>
+      </button>
+    </div>
+    <nav style="margin:auto 0;display:flex;flex-direction:column">
+      <a href="#apropos" class="mobile-menu-link menu-link">Qui suis-je</a>
+      <a href="#services" class="mobile-menu-link menu-link">Services</a>
+      <a href="#temoignages" class="mobile-menu-link menu-link">Témoignages</a>
+      <a href="#contact" class="mobile-menu-link menu-link">Contact</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <a href="#reservation" class="menu-link" style="display:flex;align-items:center;justify-content:center;min-height:58px;border-radius:999px;background:#2E3322;color:#F8F4EC;font-size:16px;font-weight:500">Réserver une séance</a>
+      <a href="https://wa.me/212703701402?text=Bonjour%20Sanae%2C%20je%20souhaiterais%20prendre%20rendez-vous%20pour%20une%20s%C3%A9ance." target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;border-radius:999px;border:1px solid #CFC2A8;color:#2E3322;font-size:16px"><span style="width:9px;height:9px;border-radius:50%;background:#3FA66B"></span>Écrire sur WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="top" style="position:relative;padding:clamp(124px,15vw,170px) 0 clamp(72px,9vw,120px)">
+    <div style="position:relative;z-index:1;max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px);display:flex;flex-wrap:wrap;align-items:center;gap:clamp(56px,7vw,104px)">
+      <div data-reveal style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:28px">
+        <span style="display:flex;align-items:center;gap:14px;font-size:12.5px;letter-spacing:0.24em;text-transform:uppercase;color:#7D6236"><span style="width:32px;height:1px;background:#B08D57"></span>Art de vivre & bien-être</span>
+        <h1 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(48px,6.4vw,94px);line-height:1;letter-spacing:-0.015em;color:#24261C;text-wrap:balance">Retrouvez la paix, <span style="font-style:italic;font-weight:300;color:#5E6640">en vous et autour de vous.</span></h1>
+        <p style="margin:0;max-width:31em;font-size:clamp(17px,1.35vw,19px);line-height:1.7;font-weight:300;color:#4E5043;text-wrap:pretty">Stress, anxiété, conflits de couple, tensions familiales : vous n'avez plus à porter cela en silence. Je vous accompagne, avec douceur et méthode, vers une vie plus apaisée.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
+          <a href="#reservation" class="cta-primary">Réserver une séance<span style="width:44px;height:44px;border-radius:50%;background:#C9A96E;color:#24261C;display:grid;place-items:center;font-size:18px">→</span></a>
+          <a href="https://wa.me/212703701402?text=Bonjour%20Sanae%2C%20je%20souhaiterais%20prendre%20rendez-vous%20pour%20une%20s%C3%A9ance." target="_blank" rel="noopener" class="cta-secondary"><span style="width:9px;height:9px;border-radius:50%;background:#3FA66B;box-shadow:0 0 0 4px rgba(63,166,107,0.15)"></span>Écrire sur WhatsApp</a>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px 24px;font-size:14px;color:#5D5E4E;padding-top:8px">
+          <span style="display:flex;align-items:center;gap:10px"><span style="width:5px;height:5px;border-radius:50%;background:#B08D57"></span>Confidentialité absolue</span>
+          <span style="display:flex;align-items:center;gap:10px"><span style="width:5px;height:5px;border-radius:50%;background:#B08D57"></span>En cabinet ou en ligne</span>
+          <span style="display:flex;align-items:center;gap:10px"><span style="width:5px;height:5px;border-radius:50%;background:#B08D57"></span>Sans jugement</span>
+        </div>
+      </div>
+      <div data-reveal data-reveal-delay="150" style="flex:1 1 320px;min-width:0;display:flex;justify-content:center">
+        <div id="hero-photo" style="position:relative;width:min(100%,440px)">
+          <div style="position:absolute;inset:0;border:1px solid #C9A96E;border-radius:50% 50% 10px 10px / 40% 40% 10px 10px;transform:translate(20px,-20px)"></div>
+          <div style="position:relative;aspect-ratio:4/5;border-radius:50% 50% 10px 10px / 40% 40% 10px 10px;overflow:hidden;background:#FFFFFF;box-shadow:0 50px 90px -50px rgba(46,51,34,0.55)">
+            <img src="assets/experte.png" alt="Portrait de Sanae Jermounoi" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block">
+          </div>
+          <div style="position:absolute;right:-10px;top:14%;width:14px;height:14px;border-radius:50%;background:#C9A96E"></div>
+          <div style="position:absolute;left:-5%;bottom:8%;z-index:2;display:flex;flex-direction:column;gap:6px;padding:18px 24px 20px;border-radius:22px;background:rgba(255,253,248,0.62);backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%);border:1px solid rgba(255,255,255,0.85);box-shadow:0 28px 50px -26px rgba(46,51,34,0.4)">
+            <span style="display:flex;align-items:center;gap:9px;font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:#4A5233"><span style="width:8px;height:8px;border-radius:50%;background:#3FA66B;box-shadow:0 0 0 4px rgba(63,166,107,0.16)"></span>En ligne & en présentiel</span>
+            <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:500;line-height:1.1;color:#24261C">Sanae Jermounoi</span>
+            <span style="font-size:13.5px;color:#5D5E4E">Experte en art de vivre</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUI SUIS-JE -->
+  <section id="apropos" style="background:linear-gradient(180deg,#F8F4EC 0%,#F1EADD 18%,#F1EADD 100%);padding:clamp(80px,11vw,150px) 0">
+    <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px);display:flex;flex-wrap:wrap;align-items:center;gap:clamp(56px,8vw,120px)">
+      <div data-reveal style="flex:1 1 300px;min-width:0;display:flex;justify-content:center;padding:20px">
+        <div style="position:relative;width:min(100%,400px);aspect-ratio:1">
+          <div style="position:absolute;inset:-18px;border-radius:50%;border:1px solid #C9A96E"></div>
+          <div style="position:absolute;inset:0;border-radius:50%;overflow:hidden;background:#FFFFFF;box-shadow:0 40px 80px -40px rgba(46,51,34,0.5)">
+            <img src="assets/experte.png" alt="Sanae Jermounoi" style="width:100%;height:100%;object-fit:cover;object-position:50% 12%;display:block">
+          </div>
+          <div style="position:absolute;left:-4%;bottom:0;width:clamp(118px,34%,144px);aspect-ratio:1;border-radius:50%;background:#2E3322;color:#F8F4EC;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;border:6px solid #F1EADD">
+            <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(34px,3.4vw,44px);line-height:1">10+</span>
+            <span style="font-size:11.5px;letter-spacing:0.04em;line-height:1.3;max-width:100px;color:#DCD8C4">ans d'accompagnement</span>
+          </div>
+        </div>
+      </div>
+      <div data-reveal data-reveal-delay="120" style="flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:26px">
+        <span style="display:flex;align-items:center;gap:14px;font-size:12.5px;letter-spacing:0.24em;text-transform:uppercase;color:#7D6236"><span style="width:32px;height:1px;background:#B08D57"></span>Qui suis-je</span>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(38px,4.6vw,62px);line-height:1.05;letter-spacing:-0.01em;color:#24261C;text-wrap:balance">Une vie apaisée, <span style="font-style:italic;font-weight:300;color:#5E6640">ça s'apprend.</span></h2>
+        <p style="margin:0;font-size:17.5px;line-height:1.75;font-weight:300;color:#4E5043;text-wrap:pretty">Je m'appelle Sanae. Depuis plus de dix ans, j'accompagne des femmes, des hommes, des couples et des familles qui traversent des moments difficiles : un stress qui ne lâche plus, des disputes qui se répètent, un silence pesant à la maison, une confiance en soi qui s'effrite.</p>
+        <p style="margin:0;font-size:17.5px;line-height:1.75;font-weight:300;color:#4E5043;text-wrap:pretty">Mon approche est simple et chaleureuse : vous écouter sans jugement, comprendre ce qui se joue vraiment, puis vous donner des outils concrets pour avancer — à votre rythme, dans le respect de vos valeurs et de votre culture.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px;padding-top:12px">
+          <div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #D9C9A8;padding-top:18px">
+            <span style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:20px;color:#7D6236">01</span>
+            <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;font-weight:500;color:#24261C">Écouter</span>
+            <span style="font-size:15px;line-height:1.6;color:#55574A">Sans jugement, avec une attention entière à ce que vous vivez.</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #D9C9A8;padding-top:18px">
+            <span style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:20px;color:#7D6236">02</span>
+            <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;font-weight:500;color:#24261C">Comprendre</span>
+            <span style="font-size:15px;line-height:1.6;color:#55574A">Identifier ce qui se joue vraiment, au-delà des symptômes.</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #D9C9A8;padding-top:18px">
+            <span style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:20px;color:#7D6236">03</span>
+            <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;font-weight:500;color:#24261C">Avancer</span>
+            <span style="font-size:15px;line-height:1.6;color:#55574A">Des outils concrets, adaptés à votre vie de tous les jours.</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px;padding-top:6px">
+          <span style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:32px;color:#7D6236">Sanae Jermounoi</span>
+          <span style="font-size:14px;color:#5D5E4E">Experte en art de vivre & bien-être relationnel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="background:linear-gradient(180deg,#F1EADD 0%,#F8F4EC 22%);padding:clamp(80px,11vw,150px) 0 clamp(110px,13vw,180px)">
+    <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px)">
+      <div data-reveal style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;margin-bottom:clamp(48px,6vw,80px)">
+        <span style="display:flex;align-items:center;gap:14px;font-size:12.5px;letter-spacing:0.24em;text-transform:uppercase;color:#7D6236"><span style="width:32px;height:1px;background:#B08D57"></span>Accompagnements<span style="width:32px;height:1px;background:#B08D57"></span></span>
+        <h2 style="margin:0;max-width:14em;font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(38px,4.6vw,62px);line-height:1.05;letter-spacing:-0.01em;color:#24261C;text-wrap:balance">Un espace pour chaque <span style="font-style:italic;font-weight:300;color:#5E6640">étape de votre vie.</span></h2>
+        <p style="margin:0;max-width:34em;font-size:17.5px;line-height:1.7;font-weight:300;color:#4E5043">Que vous veniez seul, à deux ou en famille, chaque accompagnement se construit autour de vos besoins.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
+        <div data-reveal style="display:flex">
+          <article class="service-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:44px">
+              <div style="display:flex"><span style="width:42px;height:42px;border-radius:50%;border:1.5px solid #B08D57"></span></div>
+              <span style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;color:#7D6236">01</span>
+            </div>
+            <h3 style="margin:0 0 14px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(28px,2.4vw,34px);line-height:1.1;color:#24261C">Coaching individuel</h3>
+            <p style="margin:0;font-size:16px;line-height:1.7;color:#55574A;text-wrap:pretty">Pour retrouver confiance en vous, apaiser le stress et l'anxiété, et reprendre les rênes de votre vie.</p>
+            <ul style="list-style:none;margin:26px 0 34px;padding:24px 0 0;border-top:1px solid #EFE7D8;display:flex;flex-direction:column;gap:12px;font-size:15.5px;color:#3A3C30">
+              <li style="display:flex;gap:12px;align-items:center"><span style="width:6px;height:6px;border-radius:50%;background:#B08D57;flex:none"></span>Confiance et estime de soi</li>
+              <li style="display:flex;gap:12px;align-items:center"><span style="width:6px;height:6px;border-radius:50%;background:#B08D57;flex:none"></span>Gestion du stress et de l'anxiété</li>
+              <li style="display:flex;gap:12px;align-items:center"><span style="width:6px;height:6px;border-radius:50%;background:#B08D57;flex:none"></span>Affirmation de la personnalité</li>
+            </ul>
+            <button type="button" class="book-btn" data-book="coaching">Réserver cette séance<span style="width:40px;height:40px;border-radius:50%;border:1px solid #C9A96E;display:grid;place-items:center;font-size:16px;color:#7D6236">→</span></button>
+          </article>
+        </div>
+        <div data-reveal data-reveal-delay="120" style="display:flex">
+          <article class="service-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:44px">
+              <div style="display:flex"><span style="width:42px;height:42px;border-radius:50%;border:1.5px solid #B08D57"></span><span style="width:42px;height:42px;border-radius:50%;border:1.5px solid #B08D57;margin-left:-16px"></span></div>
+              <span style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;color:#7D6236">02</span>
+            </div>
+            <h3 style="margin:0 0 14px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(28px,2.4vw,34px);line-height:1.1;color:#24261C">Thérapie de couple</h3>
+            <p style="margin:0;font-size:16px;line-height:1.7;color:#55574A;text-wrap:pretty">Pour réapprendre à se parler, dénouer les conflits et retrouver la complicité des débuts.</p>
+            <ul style="list-style:none;margin:26px 0 34px;padding:24px 0 0;border-top:1px solid #EFE7D8;display:flex;flex-direction:column;gap:12px;font-size:15.5px;color:#3A3C30">
+              <li style="display:flex;gap:12px;align-items:center"><span style="width:6px;height:6px;border-radius:50%;background:#B08D57;flex:none"></span>Communication bienveillante</li>
+              <li style="display:flex;gap:12px;align-items:center"><span style="width:6px;height:6px;border-radius:50%;background:#B08D57;flex:none"></span>Résolution des conflits</li>
+              <li style="display:flex;gap:12px;align-items:center"><span style="width:6px;height:6px;border-radius:50%;background:#B08D57;flex:none"></span>Reconstruire la confiance</li>
+            </ul>
+            <button type="button" class="book-btn" data-book="couple">Réserver cette séance<span style="width:40px;height:40px;border-radius:50%;border:1px solid #C9A96E;display:grid;place-items:center;font-size:16px;color:#7D6236">→</span></button>
+          </article>
+        </div>
+        <div data-reveal data-reveal-delay="240" style="display:flex">
+          <article class="service-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:44px">
+              <div style="display:flex"><span style="width:42px;height:42px;border-radius:50%;border:1.5px solid #B08D57"></span><span style="width:42px;height:42px;border-radius:50%;border:1.5px solid #B08D57;margin-left:-16px"></span><span style="width:42px;height:42px;border-radius:50%;border:1.5px solid #B08D57;margin-left:-16px"></span></div>
+              <span style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;color:#7D6236">03</span>
+            </div>
+            <h3 style="margin:0 0 14px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(28px,2.4vw,34px);line-height:1.1;color:#24261C">Accompagnement familial</h3>
+            <p style="margin:0;font-size:16px;line-height:1.7;color:#55574A;text-wrap:pretty">Pour apaiser les tensions, rétablir le dialogue entre les générations et créer un foyer serein.</p>
+            <ul style="list-style:none;margin:26px 0 34px;padding:24px 0 0;border-top:1px solid #EFE7D8;display:flex;flex-direction:column;gap:12px;font-size:15.5px;color:#3A3C30">
+              <li style="display:flex;gap:12px;align-items:center"><span style="width:6px;height:6px;border-radius:50%;background:#B08D57;flex:none"></span>Dialogue parents-enfants</li>
+              <li style="display:flex;gap:12px;align-items:center"><span style="width:6px;height:6px;border-radius:50%;background:#B08D57;flex:none"></span>Tensions et conflits familiaux</li>
+              <li style="display:flex;gap:12px;align-items:center"><span style="width:6px;height:6px;border-radius:50%;background:#B08D57;flex:none"></span>Un climat familial apaisé</li>
+            </ul>
+            <button type="button" class="book-btn" data-book="famille">Réserver cette séance<span style="width:40px;height:40px;border-radius:50%;border:1px solid #C9A96E;display:grid;place-items:center;font-size:16px;color:#7D6236">→</span></button>
+          </article>
+        </div>
+      </div>
+      <div data-reveal style="margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 40px;padding:24px clamp(24px,3vw,40px);border-radius:28px;background:#F1EADD;border:1px solid #E6DCC8">
+        <span style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:26px;color:#24261C">Deux façons de se rencontrer</span>
+        <div style="display:flex;flex-wrap:wrap;gap:16px 40px">
+          <span style="display:flex;align-items:center;gap:14px;font-size:15.5px;color:#3A3C30"><span style="width:36px;height:36px;border-radius:50%;background:#2E3322;display:grid;place-items:center;flex:none"><span style="width:8px;height:8px;border-radius:50%;background:#C9A96E"></span></span><span><span style="font-weight:500">En présentiel</span> — un cadre calme et confidentiel</span></span>
+          <span style="display:flex;align-items:center;gap:14px;font-size:15.5px;color:#3A3C30"><span style="width:36px;height:36px;border-radius:50%;border:1.5px solid #2E3322;display:grid;place-items:center;flex:none"><span style="width:8px;height:8px;border-radius:50%;background:#2E3322"></span></span><span><span style="font-weight:500">En ligne</span> — en visio, où que vous soyez</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEMOIGNAGES -->
+  <section id="temoignages" style="position:relative;background:#2E3322;color:#F3EEE3;border-radius:clamp(32px,5vw,64px) clamp(32px,5vw,64px) 0 0;padding:clamp(80px,11vw,140px) 0 clamp(130px,15vw,200px)">
+    <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px)">
+      <div data-reveal style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px 48px;margin-bottom:clamp(44px,5vw,72px)">
+        <div style="display:flex;flex-direction:column;gap:22px">
+          <span style="display:flex;align-items:center;gap:14px;font-size:12.5px;letter-spacing:0.24em;text-transform:uppercase;color:#D4B985"><span style="width:32px;height:1px;background:#C9A96E"></span>Témoignages</span>
+          <h2 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(38px,4.6vw,62px);line-height:1.05;letter-spacing:-0.01em;color:#F8F4EC;text-wrap:balance">Ils ont retrouvé <span style="font-style:italic;font-weight:300;color:#D4B985">leur équilibre.</span></h2>
+        </div>
+        <p style="margin:0;max-width:24em;font-size:16.5px;line-height:1.7;font-weight:300;color:#C9CBB4">Des parcours différents, une même envie : aller mieux. Les prénoms ont été modifiés par respect pour la confidentialité.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
+        <div data-reveal style="display:flex">
+          <figure class="testimonial-card">
+            <span aria-hidden="true" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:80px;line-height:0.5;height:34px;color:#C9A96E">"</span>
+            <blockquote style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(21px,1.7vw,24px);line-height:1.45;color:#F3EEE3;text-wrap:pretty">J'étais épuisée par une anxiété qui m'empêchait de dormir. Cet accompagnement m'a aidée à comprendre d'où venait ce stress et à le gérer au quotidien. Aujourd'hui, je respire enfin.</blockquote>
+            <figcaption style="margin-top:auto;display:flex;align-items:center;gap:14px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1)">
+              <span style="width:46px;height:46px;border-radius:50%;background:#4A5233;display:grid;place-items:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;color:#F3EEE3;flex:none">N</span>
+              <span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:15.5px;font-weight:500;color:#F8F4EC">Nadia, 34 ans · Casablanca</span><span style="font-size:13.5px;color:#C9CBB4">Coaching individuel</span></span>
+            </figcaption>
+          </figure>
+        </div>
+        <div data-reveal data-reveal-delay="120" style="display:flex">
+          <figure class="testimonial-card">
+            <span aria-hidden="true" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:80px;line-height:0.5;height:34px;color:#C9A96E">"</span>
+            <blockquote style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(21px,1.7vw,24px);line-height:1.45;color:#F3EEE3;text-wrap:pretty">Nous ne savions plus nous parler sans nous disputer. En quelques séances, nous avons réappris à nous écouter. Notre couple a retrouvé sa douceur.</blockquote>
+            <figcaption style="margin-top:auto;display:flex;align-items:center;gap:14px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1)">
+              <span style="width:46px;height:46px;border-radius:50%;background:#4A5233;display:grid;place-items:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;color:#F3EEE3;flex:none">I&Y</span>
+              <span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:15.5px;font-weight:500;color:#F8F4EC">Imane & Youssef · Rabat</span><span style="font-size:13.5px;color:#C9CBB4">Thérapie de couple</span></span>
+            </figcaption>
+          </figure>
+        </div>
+        <div data-reveal data-reveal-delay="240" style="display:flex">
+          <figure class="testimonial-card">
+            <span aria-hidden="true" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:80px;line-height:0.5;height:34px;color:#C9A96E">"</span>
+            <blockquote style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(21px,1.7vw,24px);line-height:1.45;color:#F3EEE3;text-wrap:pretty">Les tensions avec notre fils adolescent rendaient la maison invivable. Nous avons été guidés avec beaucoup de tact, sans que personne ne se sente jugé. Le dialogue est revenu.</blockquote>
+            <figcaption style="margin-top:auto;display:flex;align-items:center;gap:14px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1)">
+              <span style="width:46px;height:46px;border-radius:50%;background:#4A5233;display:grid;place-items:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;color:#F3EEE3;flex:none">K</span>
+              <span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:15.5px;font-weight:500;color:#F8F4EC">Khadija, mère de trois enfants · Marrakech</span><span style="font-size:13.5px;color:#C9CBB4">Accompagnement familial</span></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION -->
+  <section id="reservation" style="position:relative;z-index:1;margin-top:clamp(-64px,-5vw,-32px);background:#F1EADD;border-radius:clamp(32px,5vw,64px) clamp(32px,5vw,64px) 0 0;padding:clamp(80px,10vw,130px) 0 clamp(110px,13vw,170px)">
+    <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px);display:flex;flex-wrap:wrap;gap:clamp(48px,7vw,100px);align-items:flex-start">
+      <div data-reveal style="flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:26px">
+        <span style="display:flex;align-items:center;gap:14px;font-size:12.5px;letter-spacing:0.24em;text-transform:uppercase;color:#7D6236"><span style="width:32px;height:1px;background:#B08D57"></span>Réservation</span>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(38px,4.6vw,62px);line-height:1.05;letter-spacing:-0.01em;color:#24261C;text-wrap:balance">Faites le premier pas, <span style="font-style:italic;font-weight:300;color:#5E6640">en toute simplicité.</span></h2>
+        <p style="margin:0;max-width:30em;font-size:17.5px;line-height:1.7;font-weight:300;color:#4E5043;text-wrap:pretty">Laissez votre nom et votre numéro : je vous rappelle personnellement pour trouver ensemble le moment qui vous convient, en cabinet ou en ligne.</p>
+        <div style="display:flex;flex-direction:column;gap:16px;padding-top:26px;margin-top:6px;border-top:1px solid #DCCFB6">
+          <span style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:24px;color:#24261C">Vous préférez écrire ?</span>
+          <a href="https://wa.me/212703701402?text=Bonjour%20Sanae%2C%20je%20souhaiterais%20prendre%20rendez-vous%20pour%20une%20s%C3%A9ance." target="_blank" rel="noopener" class="cta-wa-light"><span style="width:9px;height:9px;border-radius:50%;background:#3FA66B;box-shadow:0 0 0 4px rgba(63,166,107,0.15)"></span>Écrire sur WhatsApp</a>
+          <span style="font-size:14.5px;color:#5D5E4E">Vos informations restent strictement confidentielles.</span>
+        </div>
+      </div>
+      <div data-reveal data-reveal-delay="120" style="flex:1 1 440px;min-width:0">
+        <div style="padding:clamp(26px,4vw,48px);border-radius:32px;background:rgba(255,253,248,0.78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.9);box-shadow:0 50px 100px -60px rgba(46,51,34,0.45)">
+          <!-- FORM -->
+          <div id="form-container">
+            <form id="booking-form" style="display:flex;flex-direction:column;gap:24px">
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:32px;font-weight:500;line-height:1.1;color:#24261C">Réserver une séance</span>
+                <span style="font-size:15px;color:#5D5E4E">Trois informations suffisent.</span>
+              </div>
+              <label style="display:flex;flex-direction:column;gap:9px">
+                <span style="font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;color:#4E5043">Votre nom</span>
+                <input type="text" id="f-name" placeholder="Prénom et nom" class="form-input">
+                <span id="err-name" style="font-size:14px;color:#9A3B2E;display:none"></span>
+              </label>
+              <label style="display:flex;flex-direction:column;gap:9px">
+                <span style="font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;color:#4E5043">Téléphone</span>
+                <input type="tel" id="f-phone" placeholder="06 12 34 56 78" class="form-input">
+                <span id="err-phone" style="font-size:14px;color:#9A3B2E;display:none"></span>
+              </label>
+              <div style="display:flex;flex-direction:column;gap:9px">
+                <span style="font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;color:#4E5043">Type de séance</span>
+                <div id="type-group" role="radiogroup" aria-label="Type de séance" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:10px"></div>
+                <span id="err-type" style="font-size:14px;color:#9A3B2E;display:none"></span>
+              </div>
+              <button type="submit" class="submit-btn">Envoyer ma demande<span style="width:48px;height:48px;border-radius:50%;background:#C9A96E;color:#24261C;display:grid;place-items:center;font-size:18px">→</span></button>
+              <span style="font-size:13.5px;line-height:1.5;color:#5D5E4E;text-align:center">Je vous rappelle personnellement. Aucun engagement.</span>
+            </form>
+          </div>
+          <!-- SUCCESS -->
+          <div id="success-container" class="hidden">
+            <div style="display:flex;flex-direction:column;align-items:flex-start;gap:20px;padding:12px 0">
+              <span style="width:64px;height:64px;border-radius:50%;background:#2E3322;color:#D4B985;display:grid;place-items:center;font-size:26px">&#10003;</span>
+              <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(34px,3.6vw,44px);font-weight:400;line-height:1.1;color:#24261C">Merci, <span id="sent-first" style="font-style:italic;color:#5E6640"></span></span>
+              <p id="sent-msg" style="margin:0;font-size:17px;line-height:1.7;font-weight:300;color:#4E5043;text-wrap:pretty"></p>
+              <div style="display:flex;flex-wrap:wrap;gap:12px;padding-top:6px">
+                <a id="wa-confirm" href="#" target="_blank" rel="noopener" class="confirm-wa"><span style="width:9px;height:9px;border-radius:50%;background:#3FA66B"></span>Confirmer sur WhatsApp</a>
+                <button type="button" id="reset-btn" class="reset-btn">Nouvelle demande</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div style="background:#F1EADD">
+    <footer id="contact" style="background:#23271A;color:#E9E4D6;border-radius:clamp(32px,5vw,64px) clamp(32px,5vw,64px) 0 0;padding:clamp(72px,9vw,110px) 0 36px">
+      <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px)">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:48px 40px;padding-bottom:clamp(56px,7vw,88px)">
+          <div style="display:flex;flex-direction:column;gap:16px;grid-column:span 1">
+            <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;font-weight:400;line-height:1;color:#F8F4EC">Sanae Jermounoi</span>
+            <span style="font-size:11px;letter-spacing:0.32em;text-transform:uppercase;color:#D4B985">Art de vivre & bien-être</span>
+            <p style="margin:0;font-size:15px;line-height:1.7;color:#BFC1AA;max-width:22em">Coaching individuel, thérapie de couple et accompagnement familial — au Maroc et en ligne.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <span style="font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#D4B985">Contact</span>
+            <a href="https://wa.me/212703701402" target="_blank" rel="noopener" class="footer-contact"><span style="font-size:13px;color:#A9AC92">WhatsApp</span><span style="font-size:16px">+212 7 03 70 14 02</span></a>
+            <a href="tel:+212657372054" class="footer-contact"><span style="font-size:13px;color:#A9AC92">Téléphone</span><span style="font-size:16px">+212 6 57 37 20 54</span></a>
+            <a href="mailto:sanaejarmouni490@gmail.com" class="footer-contact"><span style="font-size:13px;color:#A9AC92">E-mail</span><span style="font-size:16px">sanaejarmouni490@gmail.com</span></a>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <span style="font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#D4B985">Navigation</span>
+            <a href="#apropos" class="footer-link">Qui suis-je</a>
+            <a href="#services" class="footer-link">Services</a>
+            <a href="#temoignages" class="footer-link">Témoignages</a>
+            <a href="#reservation" class="footer-link">Réserver une séance</a>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <span style="font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#D4B985">Suivez-moi</span>
+            <a href="#" class="footer-link">Instagram</a>
+            <a href="#" class="footer-link">Facebook</a>
+            <a href="#" class="footer-link">YouTube</a>
+            <a href="#" class="footer-link">LinkedIn</a>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.1);font-size:13.5px;color:#A9AC92">
+          <span>&copy; 2026 Sanae Jermounoi. Tous droits réservés.</span>
+          <div style="display:flex;gap:24px">
+            <a href="#" class="footer-legal">Mentions légales</a>
+            <a href="#" class="footer-legal">Confidentialité</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- FLOATING WHATSAPP -->
+  <a id="float-wa" href="https://wa.me/212703701402?text=Bonjour%20Sanae%2C%20je%20souhaiterais%20prendre%20rendez-vous%20pour%20une%20s%C3%A9ance." target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp" class="float-wa">
+    <span style="width:40px;height:40px;border-radius:50%;background:#3FA66B;display:grid;place-items:center"><span style="width:10px;height:10px;border-radius:50%;background:#FFFFFF"></span></span>WhatsApp
+  </a>
+</div>
+
+<script>
+(function(){
+  var TYPES = [
+    {key:'coaching',label:'Coaching individuel',lower:'coaching individuel',sub:'Confiance, stress, anxiété'},
+    {key:'couple',label:'Thérapie de couple',lower:'thérapie de couple',sub:'Communication, conflits'},
+    {key:'famille',label:'Accompagnement familial',lower:'accompagnement familial',sub:'Dialogue, apaisement'}
+  ];
+  var selectedType = '';
+
+  // Responsive nav
+  function onResize(){
+    var narrow = window.innerWidth < 900;
+    document.getElementById('desktop-nav').style.display = narrow ? 'none' : 'flex';
+    document.getElementById('desktop-cta').style.display = narrow ? 'none' : 'inline-flex';
+    document.getElementById('menu-open').style.display = narrow ? 'flex' : 'none';
+    if(!narrow) document.getElementById('mobile-menu').classList.add('hidden');
+  }
+  window.addEventListener('resize', onResize);
+  onResize();
+
+  // Mobile menu
+  document.getElementById('menu-open').addEventListener('click', function(){
+    document.getElementById('mobile-menu').classList.remove('hidden');
+  });
+  document.getElementById('menu-close').addEventListener('click', function(){
+    document.getElementById('mobile-menu').classList.add('hidden');
+  });
+  document.querySelectorAll('.menu-link').forEach(function(a){
+    a.addEventListener('click', function(){
+      document.getElementById('mobile-menu').classList.add('hidden');
+    });
+  });
+
+  // Parallax
+  var heroPhoto = document.getElementById('hero-photo');
+  var raf = 0;
+  function parallax(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var y = window.scrollY || 0;
+    if(!reduce && y < 1600 && heroPhoto){
+      heroPhoto.style.transform = 'translate3d(0,' + (y * -0.07) + 'px,0)';
+    }
+  }
+  window.addEventListener('scroll', function(){
+    if(raf) return;
+    raf = requestAnimationFrame(function(){ raf = 0; parallax(); });
+  }, {passive:true});
+  parallax();
+
+  // Scroll reveal
+  if('IntersectionObserver' in window){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduce){
+      var els = document.querySelectorAll('[data-reveal]');
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(!en.isIntersecting) return;
+          var el = en.target;
+          io.unobserve(el);
+          el.style.opacity = '';
+          el.animate(
+            [{opacity:0,transform:'translateY(36px)'},{opacity:1,transform:'translateY(0)'}],
+            {duration:1100,delay:Number(el.dataset.revealDelay||0),easing:'cubic-bezier(.16,.8,.24,1)',fill:'backwards'}
+          );
+        });
+      },{threshold:0.1,rootMargin:'0px 0px -6% 0px'});
+      els.forEach(function(el){ el.style.opacity = '0'; io.observe(el); });
+    }
+  }
+
+  // Type buttons
+  function renderTypes(){
+    var group = document.getElementById('type-group');
+    group.innerHTML = '';
+    TYPES.forEach(function(t){
+      var on = t.key === selectedType;
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.setAttribute('role','radio');
+      btn.setAttribute('aria-checked', on ? 'true' : 'false');
+      btn.className = 'type-btn';
+      btn.style.border = '1px solid ' + (on ? '#2E3322' : '#E3D9C6');
+      btn.style.background = on ? '#2E3322' : '#FFFDF8';
+      btn.style.color = on ? '#F8F4EC' : '#24261C';
+      btn.innerHTML = '<span style="flex:none;width:18px;height:18px;margin-top:2px;border-radius:50%;border:1.5px solid '+(on?'#D4B985':'#BFB39B')+';display:grid;place-items:center"><span style="width:8px;height:8px;border-radius:50%;background:'+(on?'#D4B985':'transparent')+'"></span></span>'
+        + '<span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:15px;font-weight:500;line-height:1.3">'+t.label+'</span><span style="font-size:13px;line-height:1.4;color:'+(on?'#C9CBB4':'#6A6B5A')+'">'+t.sub+'</span></span>';
+      btn.addEventListener('click', function(){
+        selectedType = t.key;
+        document.getElementById('err-type').style.display = 'none';
+        renderTypes();
+      });
+      group.appendChild(btn);
+    });
+  }
+  renderTypes();
+
+  // Book buttons from service cards
+  document.querySelectorAll('.book-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      selectedType = btn.dataset.book;
+      renderTypes();
+      var el = document.getElementById('reservation');
+      if(el) window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-90,behavior:'smooth'});
+    });
+  });
+
+  // Form submission
+  document.getElementById('booking-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('f-name').value;
+    var phone = document.getElementById('f-phone').value;
+    var digits = phone.replace(/\D/g,'');
+    var errN = document.getElementById('err-name');
+    var errP = document.getElementById('err-phone');
+    var errT = document.getElementById('err-type');
+    var valid = true;
+
+    if(name.trim().length < 2){ errN.textContent = "Merci d'indiquer votre nom."; errN.style.display = 'block'; valid = false; }
+    else { errN.style.display = 'none'; }
+
+    if(digits.length < 9){ errP.textContent = "Merci d'indiquer un numéro de téléphone valide."; errP.style.display = 'block'; valid = false; }
+    else { errP.style.display = 'none'; }
+
+    if(!selectedType){ errT.textContent = "Choisissez le type de séance souhaité."; errT.style.display = 'block'; valid = false; }
+    else { errT.style.display = 'none'; }
+
+    if(!valid) return;
+
+    var t = TYPES.find(function(x){ return x.key === selectedType; });
+    var firstName = name.trim().split(/\s+/)[0];
+
+    document.getElementById('form-container').classList.add('hidden');
+    document.getElementById('success-container').classList.remove('hidden');
+    document.getElementById('sent-first').textContent = firstName + '.';
+    document.getElementById('sent-msg').textContent = 'Votre demande pour une séance de ' + t.lower + ' est bien reçue. Je vous recontacte très vite au ' + phone.trim() + ' pour convenir d\'un horaire.';
+    document.getElementById('wa-confirm').href = 'https://wa.me/212703701402?text=' + encodeURIComponent('Bonjour Sanae, je suis ' + name.trim() + '. Je souhaite réserver une séance de ' + t.lower + '. Mon numéro : ' + phone.trim() + '.');
+  });
+
+  // Reset
+  document.getElementById('reset-btn').addEventListener('click', function(){
+    document.getElementById('form-container').classList.remove('hidden');
+    document.getElementById('success-container').classList.add('hidden');
+    document.getElementById('f-name').value = '';
+    document.getElementById('f-phone').value = '';
+    selectedType = '';
+    renderTypes();
+  });
+})();
+</script>
+</body>
+</html>
